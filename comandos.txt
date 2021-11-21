@@ -15,7 +15,7 @@ db.auth("email","pwd")
 HU 03
 Comando para actualizar datos personales:
 use ciclo4
-db.users.updateOne({condicion},{$set:{email:udea@gmail.com})
+db.users.updateOne({condicion},{$set:{email:udea@gmail.com}})
 HU 04
 Comando para ver los usuarios registrados:
 use ciclo4
