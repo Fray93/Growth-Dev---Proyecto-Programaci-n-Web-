@@ -1,0 +1,59 @@
+HU 01
+Comando para registrarme en el sistema:
+use ciclo4
+db.users.insertOne({
+    "nombre":$string,
+    "email":$string,
+    "pwd":$string,
+    "id":$number,
+    "roll": estudiante/lider/administrador
+})
+HU 02
+Comando para autenticarme en el sistema:
+use ciclo4
+db.auth("email","pwd")
+HU 03
+Comando para actualizar datos personales:
+use ciclo4
+db.users.updateOne({condicion},{$set:{email:udea@gmail.com})
+HU 04
+Comando para ver los usuarios registrados:
+use ciclo4
+db.users.find().pretty()
+HU 05
+Comando para cambiar el estado del usuario en el proyecto:
+use ciclo4
+db.users.updateOne({condicion},{$set:{estado:pendiente/autorizado/no-autorizado})
+HU 06
+Comando para ver los proyectos:
+use ciclo4
+db.projects.find().pretty()
+Hu 07
+Comando para aprobar la creacion de un proyecto:
+use ciclo4
+db.projects.update({condicion},{$set:{estado:autorizado/no-autorizado})
+HU 08
+Comando para cambiar el estado del proyecto:
+use ciclo4
+db.projects.update({condicion},{$set:{estado:activo/inactivo})
+HU 09
+Comando para cambiar la fase de un proyecto:
+db.projects.update({condicion},{$set:{fase:desarrollo/terminado})
+use ciclo4
+HU 10
+Comando para ver la lista de estudiantes registrados en la plataforma:
+use ciclo4
+db.users.find().pretty()
+HU 11
+Comando para aceptar estudiante:
+use ciclo4
+db.users.update({condicion},{$set:{estado:autorizado/pendiente})
+HU 12
+Comando para crear un nuevo proyecto:
+use ciclo4
+db.projects.insertOne({
+    "nombre":$string,
+    "obj_g":$string,
+    "obj_s":$string,
+    "psto":$number,
+})
