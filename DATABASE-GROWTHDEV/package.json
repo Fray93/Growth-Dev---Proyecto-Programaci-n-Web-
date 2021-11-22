@@ -1,0 +1,17 @@
+{
+  "name": "DATABASE-GROWTHDEV",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^4.2.0",
+    "nodemon": "^2.0.15"
+  }
+}
