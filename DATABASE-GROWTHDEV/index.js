@@ -171,7 +171,7 @@ async function main() {
 
     //HU 20 Comando para generar una solicitud de inscripción al proyecto:
 
-    const actualizarProyecto = await collection1.updateOne({ "_id": ObjectId("619b4dca33d93594e0f3b54a") },
+    /* const actualizarProyecto = await collection1.updateOne({ "_id": ObjectId("619b4dca33d93594e0f3b54a") },
         {
             $set: {
                 solicitudes: {
@@ -181,7 +181,7 @@ async function main() {
                     }
                 }
             }
-        });
+        }); */
 
 
     return 'done';
