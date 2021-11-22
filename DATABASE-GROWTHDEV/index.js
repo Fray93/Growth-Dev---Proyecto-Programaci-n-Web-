@@ -54,7 +54,7 @@ async function main() {
 
     //HU 07 Comando para aprobar la creacion de un proyecto:
 
-    /* const actualizarProyecto = await collection1.updateOne({{"_id": ObjectId("619b4dca33d93594e0f3b54a")}, { $set: { estado1: "autorizado" } }); */
+    /* const actualizarProyecto = await collection1.updateOne({"_id": ObjectId("619b4dca33d93594e0f3b54a")}, { $set: { estado1: "autorizado" } }); */
 
 
     //HU 08 Comando para cambiar el estado del proyecto:
@@ -146,7 +146,7 @@ async function main() {
 
     //HU 17 Comando para listar la información relacionada al proyecto que deseo revisar:
 
-    /* const consultaProyectos = await collection1.findOne({"_id": ObjectId("619b4646e4667e4352c9bd9b")});
+    /* const consultaProyectos = await collection1.findOne({"_id": ObjectId("619b4dca33d93594e0f3b54a")});
     console.log('HU 17 - Proyecto que deseo revisar:', consultaProyectos); */
 
 
@@ -183,8 +183,40 @@ async function main() {
             }
         }); */
 
+    //HU 21 Comando para listar los avances de un proyecto en el que estoy inscrito:
 
-    return 'done';
+    /* const consultaProyectos = await collection1.findOne({"_id": ObjectId("619b4dca33d93594e0f3b54a")});
+    console.log('HU 21 - Proyecto que deseo revisar:', consultaProyectos); */
+
+
+    //HU 22 Comando para registrar avances a un proyecto en el que estoy inscrito :
+
+    /* const actualizarProyecto = await collection1.updateOne({
+        $and: [
+            { "_id": ObjectId("619b4dca33d93594e0f3b54a") },
+            { "avances.a1.id": 97123 },
+            { estado2: "activo" }
+        ]
+    },
+        {
+            $set: { "avances.a2.d2": "Ingreso avance" }
+        }); */
+
+    //HU 23 Comando para actualizar la información de un avance:
+
+    /* const actualizarProyecto = await collection1.updateOne({
+        $and: [
+            { "_id": ObjectId("619b4dca33d93594e0f3b54a") },
+            { "avances.a1.id": 97123 },
+            { estado2: "activo" }
+        ]
+    },
+        {
+            $set: { "avances.a1.d1": "Actualizar avance" }
+        });
+
+
+    return 'done'; */
 
 }
 
