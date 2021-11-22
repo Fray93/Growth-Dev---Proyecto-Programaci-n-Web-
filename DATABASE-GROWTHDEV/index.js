@@ -54,17 +54,17 @@ async function main() {
 
     //HU 07 Comando para aprobar la creacion de un proyecto:
 
-    /* const actualizarProyecto = await collection1.updateOne({{"_id": ObjectId("619b414d14f20f9bbc59515e")}, { $set: { estado1: "autorizado" } }); */
+    /* const actualizarProyecto = await collection1.updateOne({{"_id": ObjectId("619b4dca33d93594e0f3b54a")}, { $set: { estado1: "autorizado" } }); */
 
 
     //HU 08 Comando para cambiar el estado del proyecto:
 
-    /* const actualizarProyecto = await collection1.updateOne({"_id": ObjectId("619b414d14f20f9bbc59515e")}, { $set: { estado2: "activo" }}); */
+    /* const actualizarProyecto = await collection1.updateOne({"_id": ObjectId("619b4dca33d93594e0f3b54a")}, { $set: { estado2: "activo" }}); */
 
 
     //HU 09 Comando para cambiar la fase de un proyecto:
 
-    /* const actualizarProyecto = await collection1.updateOne({"_id": ObjectId("619b414d14f20f9bbc59515e")}, { $set: { fase: "desarrollo/terminado" } }); */
+    /* const actualizarProyecto = await collection1.updateOne({"_id": ObjectId("619b4dca33d93594e0f3b54a")}, { $set: { fase: "desarrollo/terminado" } }); */
 
 
     //HU 10  Comando para ver la lista de estudiantes registrados en la plataforma:
@@ -91,8 +91,18 @@ async function main() {
         estado2: "inactivo",
         fase: "desarrollo",
         solicitudes: {
-
-        }
+            s1: {
+                id: 97123,
+                es1: "pendiente"
+            }
+        },
+        avances: {
+            a1: {
+                id: 97123,
+                d1: "Primer Avance",
+                Obs1: ""
+            }
+        },
     }); */
 
 
@@ -104,7 +114,7 @@ async function main() {
 
     //HU 14 Comando para actualizar datos de proyectos a cargo:
 
-    /* const actualizarProyecto = await collection1.updateOne({"_id": ObjectId("619b414d14f20f9bbc59515e")},
+    /* const actualizarProyecto = await collection1.updateOne({"_id": ObjectId("619b4dca33d93594e0f3b54a")},
         {
             $set: {
                 nombre: "Cambio Prueba",
@@ -123,7 +133,56 @@ async function main() {
 
     //HU 16 Comando para cambiar el estado a la solicitudes:
 
-    
+    /* const actualizarProyecto = await collection1.updateOne({
+        $and: [
+            { "_id": ObjectId("619b4dca33d93594e0f3b54a") },
+            { "solicitudes.s1.id": 97123 }
+        ]
+    },
+        {
+            $set: { "solicitudes.s1.es1": "aceptar" }
+        });
+ */
+
+    //HU 17 Comando para listar la información relacionada al proyecto que deseo revisar:
+
+    /* const consultaProyectos = await collection1.findOne({"_id": ObjectId("619b4646e4667e4352c9bd9b")});
+    console.log('HU 17 - Proyecto que deseo revisar:', consultaProyectos); */
+
+
+    //HU 18 Comando para agregar observaciones a un avance en uno de mis proyectos:
+
+    /* const actualizarProyecto = await collection1.updateOne({
+        $and: [
+            { "_id": ObjectId("619b4dca33d93594e0f3b54a") },
+            { "avances.a1.id": 97123 }
+        ]
+    },
+        {
+            $set: { "avances.a1.Obs1": "Ingreso observación" }
+        }); */
+
+
+    //HU 19 Comando para listar proyectos en plataforma:
+
+    /* const consultaProyectos = await collection1.find().toArray();
+    console.log('HU 19 - Proyectos registrados en la plataforma:', consultaProyectos);  */
+
+
+    //HU 20 Comando para generar una solicitud de inscripción al proyecto:
+
+    const actualizarProyecto = await collection1.updateOne({ "_id": ObjectId("619b4dca33d93594e0f3b54a") },
+        {
+            $set: {
+                solicitudes: {
+                    "s1": {
+                        id: 97123,
+                        es1: "pendiente"
+                    }
+                }
+            }
+        });
+
 
     return 'done';
 
